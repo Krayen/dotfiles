@@ -1,0 +1,11 @@
+[user]
+  name = Magnus Pastuhoff
+  email = magnus.pastuhoff@gmail.com
+
+[github]
+  user = Krayen
+
+[core]
+  excludesfile = ~/.gitignore_global
+[credential]
+	helper = osxkeychain
