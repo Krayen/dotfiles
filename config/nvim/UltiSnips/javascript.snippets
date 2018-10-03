@@ -1,0 +1,58 @@
+snippet rncc "React Native Class Component" b
+import React from 'react'
+import {View, Text} from 'react-native'
+import styles from './styles'
+
+class ${1:className} extends React.Component {
+	render() {
+		return(
+				<View>
+				<Text>${2:text}</Text>
+				</View>
+				)
+	}
+}
+
+export default $1
+endsnippet
+
+snippet e "Creates an element tag"
+<${1} style={styles.${2}}>${3}</$1>
+endsnippet
+
+#StyleSheet snippet
+snippet ss "StyleSheet snippet"
+import { StyleSheet } from "react-native"
+
+const styles = StyleSheet.create({
+	${1:container}: {
+		${2:flex: 1,
+		justifyContent: "center",
+		alignItems: "center",}
+	},
+	${3:text}: {
+		color: "#${0}"
+	}
+})
+
+export default styles
+
+endsnippet
+
+snippet ess "Extended StyleSheet"
+import EStyleSheet from "react-native-extended-stylesheet"
+
+const styles = EStyleSheet.create({
+	${1:container}: {
+		${2:flex: 1,
+		justifyContent: "center",
+		alignItems: "center",}
+	},
+	${3:text}: {
+		color: "#${0}"
+	}
+})
+
+export default styles
+
+endsnippet

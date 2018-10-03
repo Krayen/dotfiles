@@ -2,6 +2,7 @@ syntax on
 syntax enable
 set background=dark
 colorscheme solarized
+filetype plugin indent on
 
 " Numbers
 set number
@@ -51,6 +52,14 @@ set smartindent
 set termencoding=utf-8
 " set encoding=utf-8
 set fileencoding=utf-8
+
+" UltiSnips
+let g:UltiSnipsSnippetsDir="$HOME/.dotfiles/config/nvim/UltiSnips"
+let g:UltiSnipsSnippetDirectories=[$HOME."/.dotfiles/config/nvim/UltiSnips"]
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+let g:UltiSnipsEditSplit='vertical'
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
