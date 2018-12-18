@@ -8,6 +8,7 @@ export ZSH="/Users/magnuspastuhoff/.oh-my-zsh"
 export PGDATA=/usr/local/var/postgres
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/opt/gettext/bin:$PATH"
+export PATH="$HOME/.fastlane/bin:$PATH"
 
 #Theme
 ZSH_THEME="simple"
@@ -42,3 +43,8 @@ alias gf='git reflog'
 
 # Default editor
 export EDITOR=/usr/bin/vim
+
+#Custom Scripts
+alias rnc='~/code/scripts/component_generator.zsh'
+alias rns='~/code/scripts/scene_generator.zsh'
+

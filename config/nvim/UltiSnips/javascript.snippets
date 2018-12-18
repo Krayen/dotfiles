@@ -1,26 +1,58 @@
+snippet	cl "console.log"
+console.log("${1}", ${2})
+endsnippet
+
+# React Native Class Component
 snippet rncc "React Native Class Component" b
 import React from 'react'
 import {View, Text} from 'react-native'
+import PropTypes from 'prop-types'
 import styles from './styles'
 
 class ${1:className} extends React.Component {
 	render() {
 		return(
-				<View>
-				<Text>${2:text}</Text>
-				</View>
-				)
+			<View style={styles.container}>
+				<Text style={styles.text}>${2:text}</Text>
+			</View>
+		)
 	}
+}
+
+$1.propTypes = {
+	${3}: PropTypes.${4}.${5:isRequired}
 }
 
 export default $1
 endsnippet
 
+snippet rnf "functional component"
+import React from 'react'
+import {View, Text} from 'react-native'
+import PropTypes from 'prop-types'
+import styles from './styles'
+
+const ${1:compName} = ${2:props} => {
+	return(
+		<View>
+			${3:put stuff here}
+		</View>
+	)
+}
+
+$1.propTypes = {
+	${4}: PropTypes.${5}.${6:isRequired}
+}
+
+export default $1
+endsnippet
+
+#Element 
 snippet e "Creates an element tag"
 <${1} style={styles.${2}}>${3}</$1>
 endsnippet
 
-#StyleSheet snippet
+#StyleSheet
 snippet ss "StyleSheet snippet"
 import { StyleSheet } from "react-native"
 
@@ -36,9 +68,9 @@ const styles = StyleSheet.create({
 })
 
 export default styles
-
 endsnippet
 
+#Extended StyleSheet
 snippet ess "Extended StyleSheet"
 import EStyleSheet from "react-native-extended-stylesheet"
 
@@ -54,5 +86,57 @@ const styles = EStyleSheet.create({
 })
 
 export default styles
+endsnippet
 
+snippet st "style tag"
+style={styles.${1}}
+endsnippet
+
+snippet ph "paddingHorizontal"
+paddingHorizontal: ${1:10},
+endsnippet
+
+snippet pv "paddingVertical"
+paddingVertical: ${1:10},
+endsnippet
+
+snippet shadow "iOS shadowProps"
+shadowColor: '#${1}',
+shadowOpacity: ${2},
+shadowRadius: ${3},
+shadowOffset: {
+	width: ${4},
+	height: ${5}
+},
+endsnippet
+
+snippet jc "justifyContent"
+justifyContent: '${1:center}',
+endsnippet
+
+snippet ai "alignItems"
+alignItems: '${1:center}',
+endsnippet
+
+snippet ja "justifyContent and alignItems"
+justifyContent: '${1:center}',
+alignItems: '${2:center}',
+endsnippet
+
+snippet so "stylesheet object"
+${1:name}: {
+	${2},
+},
+endsnippet
+
+snippet co "jsx comment"
+{/*${1}*/}
+endsnippet
+
+snippet bgc "backgroundColor"
+backgroundColor: "#${1}",
+endsnippet
+
+snippet img "create image tag"
+<Image source={${1}} style={styles.${2}} />
 endsnippet
