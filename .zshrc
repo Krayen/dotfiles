@@ -4,10 +4,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/magnuspastuhoff/.oh-my-zsh"
 
-# Deliver settings
-export DELIVER_USERNAME="magnus@saits.se"
-export DELIVER_PASSWORD="De3amon2"
-
 # EXPORTS
 export PGDATA=/usr/local/var/postgres
 export PATH="/usr/local/bin:$PATH"
