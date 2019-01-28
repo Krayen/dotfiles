@@ -99,7 +99,7 @@ func! CreateReactFunctionalComponent()
   " Choose where the component will be created
   " TODO let user type location under src/, check if it exists - if not create
   " it and then create component there. finddir(folderName, "src")
-  let path = input("\nCreate component in  (1)src/components, (2)current location, (3)src/pages? ", "2")
+  let path = input("\nCreate functional component in  (1)src/components, (2)current location, (3)src/pages? ", "2")
   if path == "1"
     let path = 'src/components/'
   elseif path == "2"
@@ -139,7 +139,7 @@ func! CreateReactClassComponent()
   " Choose where the component will be created
   " TODO let user type location under src/, check if it exists - if not create
   " it and then create component there. finddir(folderName, "src")
-  let path = input("\nCreate component in  (1)src/components, (2)current location, (3)src/pages? ", "2")
+  let path = input("\nCreate class component in  (1)src/components, (2)current location, (3)src/pages? ", "2")
   if path == "1"
     let path = 'src/components/'
   elseif path == "2"

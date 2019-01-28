@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from 'styles.module.scss';
+import styles from './styles.module.scss';
 
 const TEMP = props => {
-  return <div>TEMP</div>;
+  return <div className={styles.container}>TEMP</div>;
 };
 
 export default TEMP;
