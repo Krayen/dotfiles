@@ -10,6 +10,7 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 export PATH="$HOME/.fastlane/bin:$PATH"
 
+
 #Theme
 ZSH_THEME="simple"
 
