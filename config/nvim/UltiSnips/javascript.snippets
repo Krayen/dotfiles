@@ -48,8 +48,8 @@ import styles from './styles'
 
 const ${1:compName} = ${2:props} => {
 	return(
-		<View>
-			${3:put stuff here}
+		<View style={styles.container}>
+			<Text style={styles.text}>$1</Text>
 		</View>
 	)
 }
@@ -59,6 +59,13 @@ $1.propTypes = {
 }
 
 export default $1
+endsnippet
+
+#componentDidMount
+snippet	cdm	"ComponentDidMount"
+componentDidMount() {
+	${1:code}
+}
 endsnippet
 
 #Element 
@@ -127,6 +134,10 @@ shadowOffset: {
 	width: ${4},
 	height: ${5}
 },
+endsnippet
+
+snippet v "View"
+<View ${1:style}={styles.${2}}>${3}</View>
 endsnippet
 
 snippet jc "justifyContent"
