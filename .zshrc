@@ -9,7 +9,7 @@ export PGDATA=/usr/local/var/postgres
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 export PATH="$HOME/.fastlane/bin:$PATH"
-
+export PATH="~/Library/Android/sdk/platform-tools:$PATH"
 
 #Theme
 ZSH_THEME="simple"
@@ -48,4 +48,3 @@ export EDITOR=/usr/bin/vim
 #Custom Scripts
 alias rnc='~/code/scripts/component_generator.zsh'
 alias rns='~/code/scripts/scene_generator.zsh'
-
