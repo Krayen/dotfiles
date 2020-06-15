@@ -9,7 +9,11 @@ export PGDATA=/usr/local/var/postgres
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 export PATH="$HOME/.fastlane/bin:$PATH"
-export PATH="~/Library/Android/sdk/platform-tools:$PATH"
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
 
 #Theme
 ZSH_THEME="simple"

@@ -66,7 +66,7 @@ let g:html_indent_tags = 'li\|p'
 
 " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
 " Exclude node_modules
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|xcshareddata)|(\.(swp|ico|git|svn))$'
 
 " The Silver Searcher
 if executable('ag')
@@ -86,8 +86,14 @@ let g:jsx_ext_required = 0
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
-" Custom Scripts
+let g:ale_fixers = {
+      \ 'javascript': ['eslint']
+      \}
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
+let g:ale_fix_on_save = 1
 
+" Custom Scripts
 nnoremap <leader>c :call CreateReactClassComponent()<CR>
 nnoremap <leader>f :call CreateReactFunctionalComponent()<CR>
 nnoremap <leader>r :call CreateReactNativeClassComponent()<CR>
@@ -120,7 +126,7 @@ func! CreateReactFunctionalComponent()
   silent call mkdir(fullPathAndName)
 
   " create styles file and insert skeleton
-  silent exe "e " . fullPathAndName . "/styles.module.scss"
+  silent exe "e " . fullPathAndName . "/styles.scss"
   silent 0r ~/.dotfiles/templates/react-styles-skeleton.scss
 
   " create index file and insert skeleton, replace TEMP with the componentName

@@ -1,6 +1,8 @@
 call plug#begin('~/.config/nvim/bundle')
 
 " Define bundles via Github repos
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'w0rp/ale'
 Plug 'kchmck/vim-coffee-script'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'thoughtbot/vim-rspec'
