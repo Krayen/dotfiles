@@ -1,31 +1,22 @@
 call plug#begin('~/.config/nvim/bundle')
 
 " Define bundles via Github repos
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'w0rp/ale'
-Plug 'kchmck/vim-coffee-script'
+" Plug 'w0rp/ale'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'thoughtbot/vim-rspec'
-Plug 'jgdavey/tslime.vim'
-Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-ragtag'
-Plug 'vim-ruby/vim-ruby'
 Plug 'altercation/vim-colors-solarized'
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 Plug 'gregsexton/MatchTag'
 Plug 'Townk/vim-autoclose'
-Plug 'lervag/vimtex'
 Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'ap/vim-css-color'
+Plug 'ap/vim-css-color'  "Preview Colors
 Plug 'jparise/vim-graphql'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
+" Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
 
 call plug#end()
